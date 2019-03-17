@@ -1,0 +1,1216 @@
+.landing-page .container {
+    max-width: 78rem;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem
+}
+
+.landing-page__navigator {
+    position: fixed;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999
+}
+
+.landing-page__navigator-link {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    display: block;
+    background-color: #fff;
+    margin: 0 auto 15px;
+    transition: all .3s
+}
+
+.landing-page__navigator-link--active {
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    border: 1px solid #fff
+}
+
+.landing-page__header {
+    height: calc(100vh - 91px);
+    min-height: 640px;
+    color: #fff;
+    padding: 40px 0 20px;
+    position: relative;
+    background: linear-gradient(to right, #00B49C 0%, #00B39D 30%, #00a4bd 100%);
+    overflow: hidden;
+    z-index: 2
+}
+
+.landing-page__header-scroll {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    cursor: pointer
+}
+
+.landing-page__header-scroll-text {
+    font-size: 12px;
+    font-weight: 600;
+    transform: rotate(-90deg)
+}
+
+.landing-page__header-scroll-arrow {
+    width: 12px;
+    height: 40px;
+    margin: 60px auto 0;
+    background-image: url("https://kyber.network/app/images/landing-page/arrow-down.svg")
+}
+
+.landing-page__header-container {
+    display: flex;
+    height: 100%
+}
+
+.landing-page__header-content {
+    width: 50%;
+    align-self: center
+}
+
+.landing-page__header-content:last-child {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.landing-page__header-title {
+    font-weight: 100;
+    font-size: 64px;
+    line-height: 1.1;
+    font-family: "Cera", "Open Sans", sans-serif
+}
+
+.landing-page__header-description {
+    margin: 30px 0 50px
+}
+
+.landing-page__header-button {
+    display: inline-block;
+    background-color: #fff;
+    color: #666666;
+    font-size: 18px;
+    padding: 10px;
+    width: 100%;
+    max-width: 190px;
+    margin: 0 20px 90px 0;
+    border-radius: 4px;
+    box-shadow: 0 0 4px 0 rgba(34, 34, 34, 0.5);
+    font-family: "Cera", "Open Sans", sans-serif;
+    text-transform: capitalize;
+    cursor: pointer;
+    text-align: center;
+    transition: all .3s
+}
+
+.landing-page__header-button:hover {
+    background-color: #31cb9e;
+    color: #fff
+}
+
+.landing-page__header-button--swap {
+    margin-right: 0;
+    color: #fff;
+    background-color: #EF8102
+}
+
+.landing-page__header-button--swap:hover {
+    background-color: #f9a748
+}
+
+.landing-page__header-navigator {
+    display: flex;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    max-width: 450px
+}
+
+.landing-page__header-navigator-button {
+    width: 33.3333%;
+    font-size: 14px;
+    padding: 10px 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all .3s
+}
+
+.landing-page__header-navigator-button:last-child {
+    border-right: none
+}
+
+.landing-page__header-navigator-button:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2)
+}
+
+.landing-page__header-globe {
+    width: 800px;
+    height: 100%;
+    min-height: 780px;
+    position: absolute;
+    right: -100px;
+    opacity: 0.8;
+    background: url("https://kyber.network/app/images/landing-page/globe.png") center center no-repeat;
+    animation: fading-out 1.5s forwards
+}
+
+.landing-page__header-wheel {
+    opacity: .5;
+    position: relative;
+    transform: rotate(-20deg);
+    animation: rotating .7s forwards ease-in
+}
+
+.landing-page__header-function {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    position: absolute;
+    background: #fff center center no-repeat
+}
+
+.landing-page__header-function::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    top: -5px;
+    left: -5px;
+    border: 2px solid rgba(255, 255, 255, 0.3)
+}
+
+.landing-page__header-function span {
+    font-size: 18px;
+    font-family: "Cera", "Open Sans", sans-serif;
+    width: 150px;
+    position: absolute;
+    top: 85px;
+    left: -50%;
+    text-align: center;
+    line-height: 1.1;
+    opacity: 0;
+    animation: fading-in .3s forwards;
+    animation-delay: .7s
+}
+
+.landing-page__header-function--dapp {
+    top: -110px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-image: url("https://kyber.network/app/images/landing-page/dapp.svg");
+    background-position: 10px 15px
+}
+
+.landing-page__header-function--wallet {
+    top: -60px;
+    right: -50px;
+    background-image: url("https://kyber.network/app/images/landing-page/wallet.svg");
+    background-position: 17px 12px
+}
+
+.landing-page__header-function--fund {
+    right: -110px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url("https://kyber.network/app/images/landing-page/fund.svg");
+    background-position: 22px 15px
+}
+
+.landing-page__header-function--investor {
+    right: -50px;
+    bottom: -50px;
+    background-image: url("https://kyber.network/app/images/landing-page/investor.svg");
+    background-position: 21px 15px
+}
+
+.landing-page__header-function--payment {
+    bottom: -110px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-image: url("https://kyber.network/app/images/landing-page/payment.svg");
+    background-position: 15px 17px
+}
+
+.landing-page__header-function--team {
+    left: -50px;
+    bottom: -50px;
+    background-image: url("https://kyber.network/app/images/landing-page/team.svg")
+}
+
+.landing-page__header-function--finance {
+    left: -110px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url("https://kyber.network/app/images/landing-page/finance.svg")
+}
+
+.landing-page__header-function--dex {
+    top: -60px;
+    left: -50px;
+    background-image: url("https://kyber.network/app/images/landing-page/dex.svg")
+}
+
+.landing-page__header-frame {
+    width: 295px;
+    height: 271px;
+    background-image: url("https://kyber.network/app/images/landing-page/function-wheel.svg")
+}
+
+.landing-page__header-logo {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: url("https://kyber.network/app/images/landing-page/glowing-logo.svg") center center no-repeat
+}
+
+@keyframes fading-out {
+    to {
+        opacity: 0.4
+    }
+}
+
+@keyframes fading-in {
+    to {
+        opacity: 1;
+        transform: translateZ(0)
+    }
+}
+
+@keyframes rotating {
+    to {
+        transform: rotate(0deg);
+        opacity: 1
+    }
+}
+
+.landing-page__body {
+    padding: 100px 0 0
+}
+
+.landing-page__body-item {
+    display: flex;
+    margin-bottom: 100px
+}
+
+.landing-page__body-item--swap .landing-page__body-image {
+    background-image: url("https://kyber.network/app/images/landing-page/kyber-swap-background.svg")
+}
+
+.landing-page__body-item--swap .landing-page__body-title {
+    color: #EF8102
+}
+
+.landing-page__body-item--swap .landing-page__body-description li::after {
+    background-image: url("https://kyber.network/app/images/landing-page/check-mark-swap.svg")
+}
+
+.landing-page__body-item--swap .landing-page__body-button {
+    background-color: #EF8102
+}
+
+.landing-page__body-item--swap .landing-page__body-button:hover {
+    background-color: #f9a748
+}
+
+.landing-page__body-item--go .landing-page__body-image {
+    display: flex;
+    background-image: linear-gradient(to right, #00A4BD 70%, #72BAC2 100%)
+}
+
+.landing-page__body-item--go .landing-page__body-image-logo {
+    width: 90%;
+    margin: 0 auto
+}
+
+.landing-page__body-item--go .landing-page__body-title {
+    color: #00BDD4
+}
+
+.landing-page__body-item--go .landing-page__body-description li::after {
+    background-image: url("https://kyber.network/app/images/landing-page/check-mark-go.svg")
+}
+
+.landing-page__body-item--go .landing-page__body-button {
+    background-color: #00BDD4
+}
+
+.landing-page__body-item--go .landing-page__body-button:hover {
+    background-color: #04d3ea
+}
+
+.landing-page__body-item--developer .landing-page__body-column {
+    width: 50%;
+    padding: 40px 50px;
+    background-color: #FBFAFB
+}
+
+.landing-page__body-item--developer .landing-page__body-column:last-child {
+    background: #31cb9e;
+    color: #fff;
+    display: flex
+}
+
+.landing-page__body-item--developer .landing-page__body-column:last-child>div {
+    align-self: center
+}
+
+.landing-page__body-item--developer .landing-page__body-title {
+    color: #31CB9E
+}
+
+.landing-page__body-item--developer .landing-page__body-info {
+    letter-spacing: -0.9px;
+    font-size: 30px;
+    font-family: "Cera", "Open Sans", sans-serif;
+    font-weight: 100;
+    line-height: 1.25
+}
+
+.landing-page__body-item--developer .landing-page__body-description li::after {
+    background-image: url("https://kyber.network/app/images/landing-page/check-mark-developer.svg")
+}
+
+.landing-page__body-item--developer .landing-page__body-button {
+    background-color: #31CB9E
+}
+
+.landing-page__body-item--developer .landing-page__body-button:hover {
+    background-color: #38e0ad
+}
+
+.landing-page__body-item--reserve .landing-page__body-image {
+    background-image: url("https://kyber.network/app/images/landing-page/kyber-reserve-background.jpg")
+}
+
+.landing-page__body-item--reserve .landing-page__body-title {
+    color: #FAD347
+}
+
+.landing-page__body-item--reserve .landing-page__body-button {
+    background-color: #FAD347
+}
+
+.landing-page__body-item--reserve .landing-page__body-button:hover {
+    background-color: #f9db77
+}
+
+.landing-page__body-image,
+.landing-page__body-content {
+    width: 50%
+}
+
+.landing-page__body-image {
+    background: center center no-repeat;
+    background-size: cover
+}
+
+.landing-page__body-content {
+    padding: 40px 50px;
+    background-color: #FBFAFB
+}
+
+.landing-page__body-content-desc {
+    font-family: "Cera", "Open Sans", sans-serif;
+    margin-bottom: 25px;
+    line-height: 1.4;
+    color: #6d6d6d
+}
+
+.landing-page__body-title {
+    font-family: "Cera", "Open Sans", sans-serif;
+    font-weight: 100;
+    font-size: 42px;
+    line-height: 1;
+    margin: 30px 0
+}
+
+.landing-page__body-description {
+    font-size: 18px;
+    padding-left: 25px;
+    font-family: "Cera", "Open Sans", sans-serif
+}
+
+.landing-page__body-description li {
+    margin-bottom: 5px;
+    position: relative
+}
+
+.landing-page__body-description li::after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: -30px;
+    top: 9px;
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+.landing-page__body-description--comming {
+    margin-top: 100px;
+    font-family: "Cera", "Open Sans", sans-serif;
+    font-size: 16px
+}
+
+.landing-page__body-button {
+    width: 100%;
+    max-width: 250px;
+    padding: 13px 0;
+    margin-top: 20px;
+    display: inline-block;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 19px;
+    color: #F8F8F8;
+    transition: all .3s
+}
+
+.landing-page__body-button:hover {
+    color: #F8F8F8 !important
+}
+
+.landing-page__body-road-map {
+    background-color: #FBFAFB;
+    padding-top: 60px;
+    padding-bottom: 30px
+}
+
+.landing-page__body-road-map-title {
+    color: #222222;
+    font-family: "Cera", "Open Sans", sans-serif;
+    font-size: 42px;
+    font-weight: 100;
+    line-height: 1.2
+}
+
+.landing-page__body-road-map-line {
+    width: 100%;
+    height: 6px;
+    border-radius: 2px;
+    background: #e0e0e0;
+    position: relative;
+    margin: 40px 0 45px;
+    overflow: hidden
+}
+
+.landing-page__body-road-map-line .running-progress-bar {
+    position: absolute;
+    width: 0;
+    height: 100%;
+    border-radius: 2px;
+    background: #31cb9e;
+    transition: all .6s
+}
+
+.landing-page__body-road-map-milestones {
+    display: flex;
+    justify-content: space-between
+}
+
+.landing-page__body-road-map-milestone {
+    padding: 4px 10px 5px 0;
+    position: relative
+}
+
+.landing-page__body-road-map-milestone:first-child {
+    width: 10%
+}
+
+.landing-page__body-road-map-milestone:nth-child(2) {
+    width: 25%
+}
+
+.landing-page__body-road-map-milestone:nth-child(3) {
+    width: 20%
+}
+
+.landing-page__body-road-map-milestone:nth-child(4) {
+    width: 20%
+}
+
+.landing-page__body-road-map-milestone:nth-child(5) {
+    width: 15%
+}
+
+.landing-page__body-road-map-milestone:last-child {
+    width: 10%;
+    margin-right: 0
+}
+
+.landing-page__body-road-map-milestone::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 22px;
+    background-color: #e0e0e0;
+    top: -27px;
+    left: 10px
+}
+
+.landing-page__body-road-map-milestone::after {
+    content: '';
+    position: absolute;
+    top: -58px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #00bdd4;
+    border: 4px solid #fff;
+    border-radius: 50%
+}
+
+.landing-page__body-road-map-milestone.completed {
+    padding-left: 15px
+}
+
+.landing-page__body-road-map-milestone.completed .landing-page__body-road-map-time {
+    color: #31cb9e
+}
+
+.landing-page__body-road-map-milestone.completed::before {
+    top: -23px;
+    left: 20px;
+    height: 18px
+}
+
+.landing-page__body-road-map-milestone.completed::after {
+    top: -68px;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background: transparent url("https://kyber.network/app/images/checked.svg")
+}
+
+.landing-page__body-road-map .landing-page__body-content-desc {
+    margin-bottom: 50px
+}
+
+.landing-page__body-road-map-time {
+    color: #00bdd4;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 5px
+}
+
+.landing-page__body-road-map-target {
+    font-size: 14px
+}
+
+.landing-page__body-road-map-targets {
+    list-style-type: disc
+}
+
+.landing-page__body-road-map-targets li {
+    font-size: 14px
+}
+
+.landing-page__body-logo-container {
+    display: flex;
+    align-items: center
+}
+
+.landing-page__body-logo-text {
+    margin-top: 1px;
+    color: #141927;
+    font-size: 20px;
+    line-height: 1;
+    margin-left: 12px;
+    font-weight: 500;
+    font-family: "Cera", "Open Sans", sans-serif
+}
+
+.landing-page__body-logo {
+    width: 47px;
+    height: 70px;
+    background-image: url("https://kyber.network/app/images/landing-page/kyber-swap-logo.svg");
+    display: inline-block
+}
+
+.landing-page__body-platforms {
+    display: flex;
+    flex-wrap: wrap
+}
+
+.landing-page__body-platform {
+    color: #666666;
+    padding: 5px;
+    width: 23.5%;
+    height: 100px;
+    margin: 2% 2% 0 0;
+    box-shadow: 0 2px 18px 0 rgba(224, 224, 224, 0.5);
+    background-color: #fff;
+    border: solid 1px #e3e3e3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    transition: all .3s
+}
+
+.landing-page__body-platform:nth-child(4n) {
+    margin-right: 0
+}
+
+.landing-page__body-platform:hover {
+    border: none;
+    color: #fff;
+    background-color: #31cb9e;
+    transform: scale(1.3);
+    box-shadow: 0 2px 18px 0 rgba(72, 72, 72, 0.5);
+    z-index: 2
+}
+
+.landing-page__body-platform-name {
+    display: inline-block;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.23
+}
+
+.landing-page__body-platform-logo {
+    width: 30px;
+    height: 30px;
+    background: no-repeat center;
+    background-size: contain;
+    margin-bottom: 15px
+}
+
+@media screen and (max-width: 1385px) {
+    .landing-page__navigator {
+        display: none
+    }
+    .landing-page__header-scroll {
+        display: none
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .landing-page__header {
+        height: auto;
+        padding-top: 10px
+    }
+    .landing-page__header-container {
+        padding-top: 0;
+        flex-direction: column-reverse
+    }
+    .landing-page__header-content:first-child {
+        width: 100%;
+        position: relative;
+        z-index: 1
+    }
+    .landing-page__header-content:last-child {
+        width: 100%;
+        min-height: 700px;
+        margin: 0
+    }
+    .landing-page__header-description {
+        margin-bottom: 40px;
+        font-size: 20px
+    }
+    .landing-page__header-button {
+        position: relative;
+        z-index: 1;
+        max-width: 150px;
+        margin-bottom: 110px
+    }
+    .landing-page__header-globe {
+        top: 0;
+        right: unset
+    }
+    .landing-page__header-navigator {
+        left: 0;
+        bottom: 0;
+        width: 90%
+    }
+    .landing-page__body-item--developer .landing-page__body-platform {
+        width: 32%;
+        margin-right: 2%
+    }
+    .landing-page__body-item--developer .landing-page__body-platform:nth-child(4n) {
+        margin-right: 2%
+    }
+    .landing-page__body-item--developer .landing-page__body-platform:nth-child(3n) {
+        margin-right: 0
+    }
+    .landing-page__body-road-map {
+        padding-bottom: 70px
+    }
+    .landing-page__body-road-map-timeline {
+        position: relative;
+        width: 6px;
+        margin: 0 auto
+    }
+    .landing-page__body-road-map-title {
+        text-align: center;
+        margin-bottom: 30px
+    }
+    .landing-page__body-road-map-line {
+        height: 650px;
+        width: 6px;
+        margin: 0 auto
+    }
+    .landing-page__body-road-map-line .running-progress-bar {
+        width: 100%;
+        height: 0
+    }
+    .landing-page__body-road-map-milestones {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 0
+    }
+    .landing-page__body-road-map-milestone {
+        position: absolute;
+        left: 0;
+        margin: 0 auto;
+        padding-top: 10px;
+        text-align: left;
+        min-width: 200px;
+        width: 200px !important;
+        border-top: 1px solid #e0e0e0
+    }
+    .landing-page__body-road-map-milestone:first-child {
+        width: auto;
+        top: 0
+    }
+    .landing-page__body-road-map-milestone:nth-child(2) {
+        width: auto;
+        top: 10%
+    }
+    .landing-page__body-road-map-milestone:nth-child(3) {
+        width: auto;
+        top: 35%
+    }
+    .landing-page__body-road-map-milestone:nth-child(4) {
+        width: auto;
+        top: 55%
+    }
+    .landing-page__body-road-map-milestone:nth-child(5) {
+        width: auto;
+        top: 75%
+    }
+    .landing-page__body-road-map-milestone:last-child {
+        width: auto;
+        margin-right: 0;
+        top: 90%
+    }
+    .landing-page__body-road-map-milestone::before {
+        display: none
+    }
+    .landing-page__body-road-map-milestone:nth-child(odd) {
+        left: 6px;
+        padding-left: 20px
+    }
+    .landing-page__body-road-map-milestone:nth-child(odd):after {
+        top: -11px;
+        left: -13px
+    }
+    .landing-page__body-road-map-milestone:nth-child(odd).completed {
+        left: 6px
+    }
+    .landing-page__body-road-map-milestone:nth-child(odd).completed::after {
+        top: -21px;
+        left: -23px
+    }
+    .landing-page__body-road-map-milestone:nth-child(even) {
+        padding-right: 20px;
+        padding-left: 0 !important;
+        left: -200px
+    }
+    .landing-page__body-road-map-milestone:nth-child(even):after {
+        top: -11px;
+        left: 193px
+    }
+    .landing-page__body-road-map-milestone:nth-child(even).completed::after {
+        top: -21px;
+        left: 183px
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .landing-page__body-item--developer .landing-page__body-content-wrapper {
+        display: block
+    }
+    .landing-page__body-item--developer .landing-page__body-features {
+        width: 100%;
+        max-width: 100%
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .landing-page__body {
+        padding: 0 !important
+    }
+    .landing-page__body-item {
+        margin-bottom: 50px;
+        flex-direction: column
+    }
+    .landing-page__body-item--developer {
+        flex-direction: column-reverse
+    }
+    .landing-page__body-item--developer .landing-page__body-column {
+        width: 100%;
+        background: #fff;
+        padding: 30px 1rem 0
+    }
+    .landing-page__body-item--developer .landing-page__body-column:last-child {
+        padding-bottom: 30px
+    }
+    .landing-page__body-item--developer .landing-page__body-platforms {
+        margin-top: 10px
+    }
+    .landing-page__body-item--developer .landing-page__body-platform {
+        width: 23.5%;
+        margin: 2% 2% 0 0
+    }
+    .landing-page__body-item--developer .landing-page__body-platform:nth-child(3n) {
+        margin-right: 2%
+    }
+    .landing-page__body-item--developer .landing-page__body-platform:nth-child(4n) {
+        margin-right: 0
+    }
+    .landing-page__body-item:last-child {
+        margin-bottom: 50px
+    }
+    .landing-page__body-introduction {
+        padding: 0 !important
+    }
+    .landing-page__body-content {
+        width: 100%;
+        padding: 30px 1rem 0;
+        background: #fff
+    }
+    .landing-page__body-description--comming {
+        margin: 25px 0
+    }
+    .landing-page__body-image {
+        width: 100%;
+        height: 320px
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .landing-page__header-container {
+        padding-top: 15px
+    }
+    .landing-page__header-content:first-child {
+        width: 100%
+    }
+    .landing-page__header-title {
+        font-size: 50px;
+        line-height: 1.3
+    }
+    .landing-page__header-description {
+        margin-top: 25px;
+        margin-bottom: 40px
+    }
+    .landing-page__header-button {
+        padding: 5px 10px;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 30px
+    }
+    .landing-page__header-navigator {
+        display: none
+    }
+    .landing-page__body-road-map-target {
+        font-size: 13px
+    }
+    .landing-page__body-road-map-targets li {
+        font-size: 13px
+    }
+    .landing-page__body-road-map-line {
+        height: 730px
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .landing-page__header-container {
+        padding-top: 0
+    }
+    .landing-page__header-content:first-child {
+        margin: 0 auto
+    }
+    .landing-page__header-content:last-child {
+        min-height: 450px
+    }
+    .landing-page__header-title {
+        font-size: 37px
+    }
+    .landing-page__header-button-container {
+        margin-bottom: 30px
+    }
+    .landing-page__header-button {
+        margin-bottom: 0
+    }
+    .landing-page__header-globe {
+        width: 100%;
+        min-width: 385px;
+        height: 100%;
+        min-height: unset;
+        background-size: cover
+    }
+    .landing-page__header-frame {
+        width: 170px;
+        height: 160px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: relative;
+        top: 2px
+    }
+    .landing-page__header-function {
+        width: 40px;
+        height: 40px;
+        background-size: 33px
+    }
+    .landing-page__header-function::before {
+        width: 50px;
+        height: 50px
+    }
+    .landing-page__header-function--dapp {
+        top: -80px;
+        background-position: 4px 6px
+    }
+    .landing-page__header-function--wallet {
+        top: -40px;
+        right: -40px;
+        background-position: 8px 6px;
+        background-size: 26px
+    }
+    .landing-page__header-function--fund {
+        right: -75px;
+        background-position: 9px 5px;
+        background-size: 23px
+    }
+    .landing-page__header-function--investor {
+        right: -40px;
+        bottom: -40px;
+        background-position: 4px 6px
+    }
+    .landing-page__header-function--payment {
+        bottom: -75px;
+        background-position: 6px 7px
+    }
+    .landing-page__header-function--team {
+        left: -40px;
+        bottom: -40px
+    }
+    .landing-page__header-function--finance {
+        left: -80px;
+        background-size: 26px;
+        background-position: 7px 7px
+    }
+    .landing-page__header-function--dex {
+        top: -40px;
+        left: -40px;
+        background-size: 30px;
+        background-position: 5px 6px
+    }
+    .landing-page__header-function span {
+        width: 80px;
+        top: 50px;
+        font-size: 16px
+    }
+    .landing-page__header-logo {
+        height: 105px;
+        width: 105px;
+        top: 50%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        transform: translateY(-50%);
+        background-size: contain
+    }
+    .landing-page__body-item--developer .landing-page__body-platform {
+        width: 32%;
+        margin-right: 2%
+    }
+    .landing-page__body-item--developer .landing-page__body-platform:nth-child(4n) {
+        margin-right: 2%
+    }
+    .landing-page__body-item--developer .landing-page__body-platform:nth-child(3n) {
+        margin-right: 0
+    }
+    .landing-page__body-title {
+        margin-bottom: 15px;
+        font-size: 24px
+    }
+    .landing-page__body-description {
+        font-size: 16px
+    }
+    .landing-page__body-description--comming {
+        margin-bottom: 20px
+    }
+    .landing-page__body-button {
+        margin-top: 5px
+    }
+    .landing-page__body-road-map {
+        padding-top: 30px
+    }
+    .landing-page__body-road-map-title {
+        margin-bottom: 15px;
+        font-size: 34px
+    }
+    .landing-page__body-road-map .landing-page__body-content-desc {
+        margin-bottom: 50px
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .landing-page__body-road-map {
+        padding-bottom: 100px
+    }
+    .landing-page__body-road-map-milestone {
+        min-width: 150px;
+        width: 150px !important
+    }
+    .landing-page__body-road-map-milestone:nth-child(even) {
+        left: -150px
+    }
+    .landing-page__body-road-map-milestone:nth-child(even):after {
+        left: 143px
+    }
+    .landing-page__body-road-map-milestone:nth-child(even).completed::after {
+        left: 133px
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .landing-page__header-content:last-child {
+        min-height: 410px
+    }
+    .landing-page__header-title {
+        font-size: 30px;
+        max-width: 80%
+    }
+    .landing-page__header-description {
+        font-size: 16px
+    }
+    .landing-page__header-function--dapp {
+        top: -70px
+    }
+    .landing-page__header-function--wallet {
+        right: -30px
+    }
+    .landing-page__header-function--finance {
+        left: -55px
+    }
+    .landing-page__header-function--fund {
+        right: -55px
+    }
+    .landing-page__header-function--investor {
+        right: -30px
+    }
+    .landing-page__header-function--team {
+        left: -30px
+    }
+    .landing-page__header-function--payment {
+        bottom: -70px
+    }
+    .landing-page__header-function--dex {
+        left: -30px
+    }
+    .landing-page__header-button-container {
+        display: flex;
+        justify-content: space-between
+    }
+    .landing-page__header-button {
+        width: 47%;
+        margin: 0
+    }
+}
+
+.k-slider-wrapper {
+    transition: all .2s;
+    margin-top: 20px
+}
+
+.k-slider-wrapper.active {
+    transform: translateX(-102%)
+}
+
+.k-slider {
+    padding: 0 30px
+}
+
+.k-slider:not(:first-child) {
+    position: absolute;
+    width: 100%;
+    top: 0
+}
+
+.k-slider.tab-1 .landing-page__body-platform {
+    width: 18%
+}
+
+.k-slider.tab-1 .landing-page__body-platform:nth-child(4n) {
+    margin: 2% 2% 0 0
+}
+
+.k-slider.tab-1 .landing-page__body-platform:nth-child(5n) {
+    margin-right: 0
+}
+
+@media screen and (max-width: 1150px) {
+    .k-slider.tab-1 .landing-page__body-platform {
+        width: 32%
+    }
+    .k-slider.tab-1 .landing-page__body-platform:nth-child(5n) {
+        margin: 2% 2% 0 0
+    }
+    .k-slider.tab-1 .landing-page__body-platform:nth-child(3n) {
+        margin-right: 0
+    }
+}
+
+.k-slider-next,
+.k-slider-prev {
+    position: absolute;
+    top: calc(50% + 15px);
+    cursor: pointer
+}
+
+.k-slider-next img,
+.k-slider-prev img {
+    width: 20px
+}
+
+.k-slider-next {
+    right: 25px
+}
+
+.k-slider-prev {
+    left: 25px
+}
+
+@media screen and (max-width: 800px) {
+    .k-slider-next {
+        right: 12px
+    }
+    .k-slider-prev {
+        left: 12px
+    }
+}
